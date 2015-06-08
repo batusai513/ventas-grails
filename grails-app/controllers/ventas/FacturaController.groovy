@@ -22,11 +22,17 @@ class FacturaController {
     }
 
     def create() {
-        respond new Factura(params)
+        def f = new Factura(params)
+        def d = new DetalleFactura()
+        f.addToDetalleFacturas(d)
+        respond f
     }
 
     @Transactional
-    def save(Factura facturaInstance) {
+    def save() {
+        println(params.list('expandableDetalleList'))
+        Factura facturaInstance = new Factura()
+        facturaInstance.properties = params
         if (facturaInstance == null) {
             notFound()
             return
