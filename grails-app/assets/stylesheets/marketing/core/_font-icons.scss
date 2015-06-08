@@ -1,0 +1,88 @@
+.icon-lg {
+  font-size: (4em / 3);
+  line-height: (3em / 4);
+  vertical-align: -15%;
+}
+.icon-2x { font-size: 2em; }
+.icon-3x { font-size: 3em; }
+.icon-4x { font-size: 4em; }
+.icon-5x { font-size: 5em; }
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: '3DBambu';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-right:before {
+  content: "\e600";
+}
+
+.icon-drop:before {
+  content: "\e601";
+}
+
+.icon-facebook:before {
+  content: "\e602";
+}
+
+.icon-flame:before {
+  content: "\e603";
+}
+
+.icon-instagram:before {
+  content: "\e604";
+}
+
+.icon-mail:before {
+  content: "\e605";
+}
+
+.icon-paint:before {
+  content: "\e606";
+}
+
+.icon-pencil:before {
+  content: "\e607";
+}
+
+.icon-phone:before {
+  content: "\e608";
+}
+
+.icon-pin:before {
+  content: "\e609";
+}
+
+.icon-reload:before {
+  content: "\e60a";
+}
+
+.icon-sound:before {
+  content: "\e60b";
+}
+
+.icon-store:before {
+  content: "\e60c";
+}
+
+.icon-tool:before {
+  content: "\e60d";
+}
+
+.icon-twitter:before {
+  content: "\e60e";
+}
+
+.icon-user:before {
+  content: "\e60f";
+}
+

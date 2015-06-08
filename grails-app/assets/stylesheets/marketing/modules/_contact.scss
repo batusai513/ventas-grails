@@ -1,0 +1,17 @@
+.contact-container{
+	@extend %grid;
+	@extend %grid--wide;
+}
+
+.contact-form,
+.contact-data{
+	@extend %grid__item;
+}
+
+.contact-form{
+	@extend %small--three-quarters;
+}
+
+.contact-data{
+	@extend %small--one-quarter;
+}

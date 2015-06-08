@@ -1,0 +1,15 @@
+.card .card-title{font-size: 20px; margin: 0;}
+.card .card-content .card-title{line-height: 38px;}
+
+.login-card{
+  max-width: 360px;
+  margin: auto;
+}
+
+hr.divider{
+  border: 0;
+}
+
+.text-center{
+  text-align: center;
+}

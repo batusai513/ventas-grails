@@ -1,0 +1,120 @@
+.hero{
+  * {
+    color: inherit;
+  }
+  background-repeat: no-repeat;
+  padding: $base-spacing-unit * 4 0 $base-spacing-unit * 4;
+  @media #{$small} {
+    padding: $base-spacing-unit * 6 0 $base-spacing-unit;
+  }
+}
+
+.hero--main{
+  background-image: url('../images/main-hero-image-small.jpg');
+  background-position: right;
+  background-size: cover;
+  color: white;
+  @media #{$small} {
+    background-image: url('../images/main-hero-image.jpg');
+    background-size: auto;
+    @include rem(500px, height);
+  }
+}
+
+.hero--textures{
+  background-image: url('../images/hero-textures-image-small.jpg');
+  background-position: center;
+  background-size: cover;
+  color: white;
+  @media #{$small} {
+    background-image: url('../images/hero-textures-image.jpg');
+    background-size: auto;
+    @include rem(400px, height);
+  }
+}
+
+.hero--reinvent{
+  background-image: url('../images/hero-reinvent-image-small.jpg');
+  background-position: center;
+  background-size: cover;
+  color: white;
+  @media #{$small} {
+    background-image: url('../images/hero-reinvent-image.jpg');
+    background-size: auto;
+    @include rem(350px, height);
+  }
+}
+
+.hero--instalation{
+  background-image: url('../images/hero-instalation-image-small.jpg');
+  background-position: center;
+  background-size: cover;
+  color: white;
+  @media #{$small} {
+    background-image: url('../images/hero-instalation-image.jpg');
+    background-size: auto;
+    @include rem(500px, height);
+  }
+}
+
+.hero--faq{
+  background-image: url('../images/hero-faq-image-small.jpg');
+  background-position: center;
+  background-size: cover;
+  color: white;
+  @media #{$small} {
+    background-image: url('../images/hero-faq-image.jpg');
+    background-size: auto;
+    @include rem(350px, height);
+  }
+}
+
+.hero--contact{
+  background-image: url('../images/hero-contact-image-small.jpg');
+  background-position: center;
+  background-size: cover;
+  color: white;
+  @media #{$small} {
+    background-image: url('../images/hero-contact-image.jpg');
+    background-size: auto;
+    @include rem(400px, height);
+  }
+}
+
+.hero--main__title{
+  @include rem($font-size-h2);
+  font-weight: 200;
+  text-transform: uppercase;
+  b{
+    font-weight: 300;
+  }
+}
+
+.hero--main__subtitle{
+  font-weight: 400;
+}
+
+.title--bordered{
+  padding-bottom: $half-spacing-unit;
+  position: relative;
+  &:after{
+    content: "";
+    width: 60%;
+    border-bottom: 1px solid;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+blockquote{
+  &:before{
+    text-align: center;
+    font-family: Times, "Times New Roman", serif;
+    font-size: 5em;
+    font-weight: 700;
+    line-height: 1;
+    content: "\201C";
+    display: block;
+  }
+}

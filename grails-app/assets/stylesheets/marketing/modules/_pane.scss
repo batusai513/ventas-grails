@@ -1,0 +1,73 @@
+.pane{
+	padding: $base-spacing-unit 0;
+	*{
+		color: inherit;
+	}
+	&.bg-lighter-gray,
+	&.bg-brand{
+		border-width: 1px 0;
+		border-style: solid;
+		border-color: transparent;
+	}
+	&.bg-lighter-gray{
+		border-color: darken($gray-lighter, 10%);
+	}
+	&.bg-brand{
+		border-color: darken($color-brand, 5%);
+	}
+}
+
+.bg-lighter-gray{
+	background-color: $gray-lighter;
+}
+
+.bg-brand{
+	background-color: $color-brand;
+	color: #7B6C17;
+}
+
+.pane--large{
+	@media #{$small} {
+		padding: $base-spacing-unit * 4 0;
+	}
+}
+
+.pane--medium{
+	@media #{$small} {
+		padding: $base-spacing-unit * 3 0;
+	}
+}
+
+.pane--small{
+	padding: $base-spacing-unit 0;
+}
+
+.pane--spaces{
+	@extend .pane--large;
+	background-image: url('../images/espacios.jpg');
+	background-position: center;
+	background-size: cover;
+	color: white;
+	@media #{$small} {
+		@include rem(400px, height);
+		padding: $base-spacing-unit * 4 0;
+	}
+}
+
+.pane--panels{
+	@extend .pane--large;
+}
+.pane--panels__image img{
+	display: none;
+	@media #{$medium} {
+		display: block;
+	}
+}
+.pane--panel__body{
+	@media #{$medium} {
+		padding-right: $base-spacing-unit * 4;
+	}
+	@media #{$large} {
+		padding-right: $base-spacing-unit * 15;
+	}
+}

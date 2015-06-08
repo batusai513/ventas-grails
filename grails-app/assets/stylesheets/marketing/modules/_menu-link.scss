@@ -1,0 +1,45 @@
+.menu-link {
+    display: inline-block;
+    vertical-align: middle;
+    background: white;
+    font-size: 11px;
+    z-index: 10;
+    width: 3.5em;
+    height: 3em;
+    padding: 0.5em;
+    position: relative;
+    @media #{$medium} {
+        display: none;
+    }
+}
+
+.menu-link span,
+.menu-link span:before,
+.menu-link span:after {
+    background-color: black;
+    width: 100%;
+    height: .3em;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s
+}
+
+.menu-link span {
+    position: relative;
+    display: block;
+    margin-top: 0.9em
+}
+
+.menu-link span:before,
+.menu-link span:after {
+    position: absolute;
+    top: -.55em;
+    content: " ";
+    left: 0
+}
+
+.menu-link span:after {
+    top: .55em
+}

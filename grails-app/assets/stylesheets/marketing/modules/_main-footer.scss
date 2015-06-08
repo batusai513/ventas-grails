@@ -1,0 +1,31 @@
+.main-footer{
+	background-color: #4A4A4A;
+	color: white;
+	padding: $half-spacing-unit * 2 0;
+	a, h1{
+		color: white;
+	}
+}
+
+.footer-container{
+	@extend %grid;
+	@extend %grid--wide;
+}
+
+.footer__navigation,
+.footer__social,
+.footer__newsletter{
+	@extend %grid__item;
+	@extend %one-whole;
+}
+
+.footer__navigation,
+.footer__social{
+	@extend %medium--one-quarter;
+	@extend %small--one-half;
+}
+
+.footer__newsletter{
+	@extend %medium--one-half;
+	@extend %small--one-whole;
+}

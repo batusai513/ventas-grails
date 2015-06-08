@@ -1,0 +1,18 @@
+.characteristics{
+	@extend %grid;
+	@extend %grid--wide;
+}
+
+.characteristic__container{
+	@extend %grid__item;
+	@extend %small--one-half;
+}
+
+.characteristic{
+	min-height: 140px;
+}
+
+.characteristic__title{
+	@extend .epsilon;
+  @extend .weight-semibold;
+}

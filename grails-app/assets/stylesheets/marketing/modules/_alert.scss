@@ -1,0 +1,71 @@
+$color-alert-foreground:        white;
+
+
+$color-alert-notice:            $brand-info;
+$color-alert-error:             $brand-danger;
+$color-alert-warning:           $brand-warning;
+$color-alert-success:           $brand-success;
+
+
+$icon-warning:                  '.icon-triangle';
+$icon-notice:                   '.icon-exclamation';
+$icon-success:                  '.icon-checkmark';
+$icon-error:                    '.icon-cancel';
+
+$alerts: (notice, error, warning, success);
+$alerts-icons: ($icon-notice, $icon-error, $icon-warning, $icon-success);
+$alerts-colors: ($color-alert-notice, $color-alert-error, $color-alert-warning, $color-alert-success);
+
+.alert-box{
+  background: white;
+  border-radius: 0;
+  clear: both;
+  line-height: 1.2;
+  padding-right: em(12);
+
+  left: 0;
+  margin: auto;
+  max-width: 710px;
+  position: absolute;
+  right: 0;
+  top: 95px;
+  .alert-box__icon{
+    margin-right: em(12);
+  }
+}
+
+.alert-box__icon{
+  @include size(em(50));
+  line-height: em(50);
+  background: $color-alert-notice;
+  border-color: darken($color-alert-notice, 10%);
+  text-align: center;
+  color: $color-alert-foreground;
+  display: inline-block;
+  vertical-align: middle;
+  border-width: 1px 0 1px 1px;
+  border-style: solid;
+  & > i{
+    font-size: em(18);
+  }
+}
+
+.alert-box__text{
+  font-weight: 700;
+}
+
+@for $i from 0 to length($alerts){
+
+  .alert-box--#{nth($alerts, $i+1)}{
+
+    .alert-box__icon{
+      background: #{nth($alerts-colors, $i+1)};
+      border-color: darken(nth($alerts-colors, $i+1), 10%);
+      & > i{
+        @extend #{nth($alerts-icons, $i+1)};
+      }
+    }
+
+  }
+
+}

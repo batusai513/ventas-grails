@@ -1,0 +1,44 @@
+$color-background-extra:            $color-brand;
+$color-foreground-extra:            $gray-lighter;
+$color-foreground-checked-extra:    white;
+
+$color-foreground-danger:           $brand-danger;
+
+
+.custom-check{
+  font-size: em(12);
+}
+
+.custom-check__input{
+  width: 0;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+  &:checked + .custom-check__fake,
+  &:checked + div > .custom-check__fake,
+  &:checked + label + .custom-check__fake{
+    @extend %icons-base;
+    background: $color-background-extra;
+    color: $color-foreground-checked-extra;
+    &:after{
+      content: "\e000";
+    }
+  }
+  &.error + .custom-check__fake{
+    border-color: $color-foreground-danger;
+  }
+}
+
+.custom-check__fake{
+  @include size(16px);
+  border-radius: $border-radius-base;
+  text-align: center;
+  background: #F6F6F6;
+  border: 1px solid $input-border;
+  display: inline-block;
+  vertical-align: text-top;
+  font-size: em(10, 12);
+  line-height: em(16, 10) !important;
+  margin-right: em(3, 10);
+}

@@ -1,0 +1,5 @@
+.newsletter__input{
+  @media #{$medium} {
+    min-width: 250px;
+  }
+}
