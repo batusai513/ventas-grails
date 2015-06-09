@@ -8,12 +8,12 @@ class BootStrap {
       def juana = new ventas.Cliente(nombre: "Juana", apellido: "Banana", telefono: "3522236", direccion: "Calle 45 # 36 - 06", email: "juana@banana.com").save()
       def now = new Date()
       def chuck = new ventas.Vendedor(
-        nombre: "Chuck",
-        apellido: "Norris",
-        email: "chuck@norris.com",
+        nombre: "Richard",
+        apellido: "Roncancio",
+        email: "richard@batusai.com",
         telefono: "6663232",
-        username: "chuck_norris",
-        password: "highkick",
+        username: "batusai",
+        password: "12345678",
         dateCreated: now).save(failOnError: true)
 
         def f = new ventas.Factura(

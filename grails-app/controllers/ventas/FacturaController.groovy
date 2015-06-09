@@ -30,9 +30,15 @@ class FacturaController {
 
     @Transactional
     def save() {
-        println(params.list('expandableDetalleList'))
-        Factura facturaInstance = new Factura()
-        facturaInstance.properties = params
+        Factura facturaInstance = new Factura(params)
+        facturaInstance.detalleFacturas.each{
+            def cantidad = it.cantidad
+            def producto = it.producto
+            producto.stock = producto.stock - cantidad
+            producto.save(flush:true)
+            it.precio = producto.precio
+            it.total = producto.precio * cantidad
+        }
         if (facturaInstance == null) {
             notFound()
             return

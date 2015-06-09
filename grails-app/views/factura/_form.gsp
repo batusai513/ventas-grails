@@ -24,25 +24,27 @@
 	</div>
 </div>
 
+<div class="factura-detalle">
 
 <g:each in="${facturaInstance?.detalleFacturas?}" var="item" status="i">
-	<g:hiddenField name='expandableDetalleList[${i}].id' value='${item?.id}'/>
-	<div class="row">
+	<div class="row js-row-clone">
 		<div class="col sm12 m3">
-			<label for="expandableDetalleList[${i}].producto">producto</label>
-			<g:select class="browser-default" from="${ventas.Producto.list()}" name="expandableDetalleList[${i}].producto" optionKey="id" optionValue="${{ it.nombre }}" value="${item?.producto?.id}" />
+			<label for="detalleFacturas[${i}].producto">producto</label>
+			<g:select class="browser-default" from="${ventas.Producto.list()}" name="detalleFacturas[${i}].producto" optionKey="id" optionValue="${{ it.nombre }}" value="${item?.producto?.id}" />
 		</div>
 		<div class="col sm12 m3">
-			<label for="expandableDetalleList[${i}].cantidad">Cantidad</label>
-			<g:field name="expandableDetalleList[${i}].cantidad" type="number" min="0" value="${item.cantidad}" required=""/>
+			<label for="detalleFacturas[${i}].cantidad">Cantidad</label>
+			<g:field name="detalleFacturas[${i}].cantidad" type="number" min="0" value="${item?.cantidad}" required=""/>
 		</div>
 		<div class="col sm12 m3">
-			<label for="expandableDetalleList[${i}].precio">Precio</label>
-			<g:field name="expandableDetalleList[${i}].precio" type="number" min="0" value="${item.precio}" required=""/>
+			<label for="detalleFacturas[${i}].precio">Precio</label>
+			<g:field name="detalleFacturas[${i}].precio" type="number" min="0" value="${item?.precio}" readonly="readonly" />
 		</div>
 		<div class="col sm12 m3">
-			<label for="expandableDetalleList[${i}].total">Total</label>
-			<g:field name="expandableDetalleList[${i}].total" type="number" min="0" value="${item.total}" required=""/>
+			<label for="detalleFacturas[${i}].total">Total</label>
+			<g:field name="detalleFacturas[${i}].total" type="number" min="0" value="${item?.total}" readonly="readonly" />
 		</div>
 	</div>
 </g:each>
+</div>
+<a href="#" class="js-new">Nuevo</a>

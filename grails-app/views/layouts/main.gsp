@@ -43,6 +43,9 @@
                 <li class="${controllerName.equals('cliente') ? 'active' : ''}">
                     <g:link url="[action: 'index', controller: 'cliente']">Clientes</g:link>
                 </li>
+                <li class="${controllerName.equals('vendedor') ? 'active' : ''}">
+                    <g:link url="[action: 'index', controller: 'vendedor']">Vendedor</g:link>
+                </li>
                 <li class="${controllerName.equals('factura') ? 'active' : ''}">
                     <g:link url="[action: 'index', controller: 'factura']">Facturas</g:link>
                 </li>

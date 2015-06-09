@@ -66,10 +66,10 @@
 							<tbody>
 								<g:each in="${facturaInstance?.detalleFacturas}" var="detalle">
 									<tr>
-										<td>${detalle.producto.nombre}</td>
-										<td>${detalle.cantidad}</td>
-										<td>${detalle.precio}</td>
-										<td>${detalle.cantidad * detalle.precio}</td>
+										<td>${detalle?.producto?.nombre}</td>
+										<td>${detalle?.cantidad}</td>
+										<td>${detalle?.precio}</td>
+										<td>${detalle?.cantidad * detalle?.precio}</td>
 									</tr>
 								</g:each>
 								<tfoot>

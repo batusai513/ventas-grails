@@ -33,7 +33,9 @@
 	                  <div class="card-action">
 	                    <g:form resource="${producto}" method="DELETE">
 	                      <g:link action="edit" id="${producto.id}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
+	                      <g:if test="${producto.detalleFacturas?.size() == 0}">
 	                      <button class="btn waves-effect waves-light red accent-4" type="submit" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');">${message(code: 'default.button.delete.label', default: 'Delete')}</button>
+	                      </g:if>
 	                    </g:form>
 	                  </div>
 	                </article>
